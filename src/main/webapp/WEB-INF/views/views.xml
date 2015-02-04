@@ -9,10 +9,12 @@
     <definition name=".mainTemplate" template="/WEB-INF/views/mainTemplate.jsp">
         <put-attribute name="title" value="Simple Tiles 2 Example" type="string"/>
         <put-attribute name="header" value="/WEB-INF/views/blank.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/blank.jsp"/>
         <put-attribute name="body" value="/WEB-INF/views/blank.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/blank.jsp"/>
     </definition>
 
-    <definition name="home" extends=".mainTemplate">
+    <definition name="homeTile" extends=".mainTemplate">
         <put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
     </definition>
 

@@ -18,6 +18,6 @@ public class HomeController {
 
     @RequestMapping({"/", "/home"})
     public String showForm() {
-        return "home";
+        return "homeTile";
     }
 }
