@@ -29,13 +29,11 @@ public class EntityController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String addEntityFromForm(@Valid BeanEntity beanEntity, BindingResult bindingResult, Model model) {
+	public String addEntityFromForm(@Valid BeanEntity beanEntity, BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) {
 			return "newEntityTile";
 		}
-
 		beanEntityDAO.addEntity(beanEntity);
-
 		return "redirect:/entities?list";
 	}
 
