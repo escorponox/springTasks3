@@ -1,6 +1,9 @@
 package jpa;
 
+import org.hibernate.validator.constraints.Range;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
@@ -11,10 +14,14 @@ public class BeanEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ")
     private Long id;
+
+	@Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters long.")
     private String titulo;
+
+	@Range(min = 1, max = 100, message = "min 1 max 100")
     private Long numero;
 
-    protected BeanEntity() {
+    public BeanEntity() {
     }
 
     public BeanEntity(String titulo, Long numero) {

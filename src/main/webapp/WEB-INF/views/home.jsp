@@ -1,1 +1,1 @@
-aaaa
+This is the home page.

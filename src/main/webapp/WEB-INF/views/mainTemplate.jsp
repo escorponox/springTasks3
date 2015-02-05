@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Spring MVC - Tiles Integration tutorial</title>
+    <title>Spring MVC Module Tasks</title>
     <style>
         body {
             margin-top: 20px;
@@ -16,11 +16,11 @@
     <!-- Header -->
     <tiles:insertAttribute name="header"/>
     <!-- Menu Page -->
-    <div class="span-5  border" style="height:400px;background-color:#FCFCFC;">
+    <div style="height:auto;background-color:#9b9b9b;">
         <tiles:insertAttribute name="menu"/>
     </div>
     <!-- Body Page -->
-    <div class="span-19 last">
+    <div style="height:auto;background-color:#FCFCFC;">
         <tiles:insertAttribute name="body"/>
     </div>
     <!-- Footer Page -->
