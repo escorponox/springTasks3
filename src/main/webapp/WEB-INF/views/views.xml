@@ -25,4 +25,8 @@
         <put-attribute name="body" value="/WEB-INF/views/listEntities.jsp"/>
     </definition>
 
+    <definition name="welcome" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/flow/welcome.jsp"/>
+    </definition>
+
 </tiles-definitions>

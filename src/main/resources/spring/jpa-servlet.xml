@@ -23,6 +23,7 @@
 
         <tx:annotation-driven transaction-manager="tm"/>
         <bean id="dao" class="jpa.BeanEntityDAO"/>
+        <bean id="customerDao" class="jpa.CustomerDAO"/>
         <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
             <property name="database" value="ORACLE"/>
             <property name="showSql" value="true"/>

@@ -24,6 +24,7 @@
         <param-value>
             /WEB-INF/springtask-servlet.xml
             classpath:/spring/jpa-servlet.xml
+            classpath:/spring/flow-servlet.xml
         </param-value>
     </context-param>
 
