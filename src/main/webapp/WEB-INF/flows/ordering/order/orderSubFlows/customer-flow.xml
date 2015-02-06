@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.springframework.org/schema/webflow"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+    <var name="customer" class="jpa.Customer"/>
+    
+    <view-state id="welcome" view="welcome">
+        <transition on="phoneEntered" to="lookUpCustomer"/>
+    </view-state>
+    
+    <action-state id="lookUpCustomer">
+        <evaluate result="customer" expression="pizzaService.getCustomerByPhone(requestParameters.phoneNumber)"/>
+        <transition on-exception="flow.service.CustomerNotFoundException" to="registrationForm"/>
+        <transition to="customerReady"/>
+    </action-state>
+
+    <view-state id="registrationForm" model="customer" view="newCustomer">
+        <on-entry>
+            <evaluate expression="customer.phoneNumber = requestParameters.phoneNumber"/>
+        </on-entry>
+        <transition on="submit" to="addCustomer"/>
+    </view-state>
+
+    <action-state id="addCustomer">
+        <evaluate expression="pizzaService.addCustomer(customer)"/>
+        <transition on-exception="org.springframework.transaction.TransactionSystemException" to="registrationForm"/>
+        <transition to="customerReady"/>
+    </action-state>
+
+    <end-state id="customerReady"/>
+    <end-state id="cancel"/>
+
+</flow>

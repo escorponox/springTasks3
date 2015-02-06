@@ -10,17 +10,17 @@ import java.io.Serializable;
 public class Customer implements Serializable {
 
 	@Id
-	@Pattern(regexp = "^\\d{9}$", message = "Phone Number must be between 9 digits long.")
-	private String phoneNumber;
+    @Pattern(regexp = "^\\d{9}$", message = "Phone Number must be 9 digits long.")
+    private String phoneNumber;
 
 	@Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters long.")
 	private String name;
 
-	@Size(min = 10, max = 100, message = "Address must be between 4 and 20 characters long.")
-	private String address;
+    @Size(min = 10, max = 100, message = "Address must be between 10 and 100 characters long.")
+    private String address;
 
-	@Pattern(regexp = "^\\d{5}$", message = "ZIP Code must be between 5 digits long.")
-	private String zipCode;
+    @Pattern(regexp = "^\\d{5}$", message = "ZIP Code must be 5 digits long.")
+    private String zipCode;
 
 	public Customer() {
 	}

@@ -1,11 +1,12 @@
 package flow.domain;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
 
-public enum Base {
+public enum Base implements Serializable {
 
 	FINA,
 	CLASICA,

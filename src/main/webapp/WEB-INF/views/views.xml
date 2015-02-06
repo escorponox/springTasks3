@@ -29,4 +29,8 @@
         <put-attribute name="body" value="/WEB-INF/views/flow/welcome.jsp"/>
     </definition>
 
+    <definition name="newCustomer" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/flow/newCustomer.jsp"/>
+    </definition>
+
 </tiles-definitions>

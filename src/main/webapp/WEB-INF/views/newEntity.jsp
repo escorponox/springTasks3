@@ -7,12 +7,12 @@
         <fieldset>
             <table cellspacing="0">
                 <tr>
-                    <td><sf:label path="titulo">Título: </sf:label></td>
+                    <td><sf:label path="titulo">Titulo: </sf:label></td>
                     <td><sf:input path="titulo"/></td>
                     <td><sf:errors path="titulo"/></td>
                 </tr>
                 <tr>
-                    <td><sf:label path="numero">Número: </sf:label></td>
+                    <td><sf:label path="numero">Numero: </sf:label></td>
                     <td><sf:input path="numero"/></td>
                     <td><sf:errors path="numero"/></td>
                 </tr>

@@ -4,3 +4,4 @@
 <a href="<s:url value="/"/>">Home</a>
 <a href="<s:url value="/entities?new"/>">New</a>
 <a href="<s:url value="/entities?list"/>">List</a>
+<a href="<s:url value="/ordering/order"/>">Pizza Flow</a>
