@@ -3,7 +3,7 @@
 <div>
     <h2>Customer identification: </h2>
     <sf:form>
-        <input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}">
+        <input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}"/>
         <table cellspacing="3">
             <tr>
                 <td><label for="phoneNumber">Phone Number: </label></td>

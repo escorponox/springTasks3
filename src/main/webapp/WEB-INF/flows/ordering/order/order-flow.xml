@@ -5,17 +5,24 @@
 
     <var name="order" class="flow.domain.Order"/>
 
-    <subflow-state id="identifyCustomer" subflow="ordering/order/orderSubFlows">
+    <subflow-state id="identifyCustomer" subflow="customerFlow">
         <output name="customer" value="order.customer"/>
         <transition on="customerReady" to="buildOrder"/>
     </subflow-state>
 
-    <!--<subflow-state id="build" subflow="ordering/order/orderSubFlows">-->
-    <!--<input name="order" value="order"/>-->
-    <!--<transition on="orderReady" to="buildOrder"/>-->
-    <!--</subflow-state>-->
+    <subflow-state id="buildOrder" subflow="buildOrderFlow">
+        <input name="order" value="order"/>
+        <transition on="orderReady" to="thankCustomer"/>
+    </subflow-state>
 
-    <end-state id="buildOrder"/>
+    <view-state id="thankCustomer">
+        <transition to="endState"/>
+    </view-state>
 
-    
+    <end-state id="endState"/>
+
+    <global-transitions>
+        <transition on="cancel" to="endState"/>
+    </global-transitions>
+
 </flow>

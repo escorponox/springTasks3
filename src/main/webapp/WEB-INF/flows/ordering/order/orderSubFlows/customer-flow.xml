@@ -28,7 +28,13 @@
         <transition to="customerReady"/>
     </action-state>
 
-    <end-state id="customerReady"/>
+    <end-state id="customerReady">
+        <output name="customer"/>
+    </end-state>
     <end-state id="cancel"/>
+
+    <global-transitions>
+        <transition on="cancel" to="cancel"/>
+    </global-transitions>
 
 </flow>

@@ -5,8 +5,8 @@
     <h2>Entities List</h2>
     <table cellspacing="5">
         <tr>
-            <th>Título</th>
-            <th>Número</th>
+            <th>Titulo</th>
+            <th>Numero</th>
         </tr>
         <c:forEach items="${beanEntityList}" var="item">
             <tr>
