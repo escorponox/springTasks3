@@ -12,10 +12,10 @@
 
     <subflow-state id="buildOrder" subflow="buildOrderFlow">
         <input name="order" value="order"/>
-        <transition on="orderReady" to="thankCustomer"/>
+        <transition on="orderCreated" to="thankCustomer"/>
     </subflow-state>
 
-    <view-state id="thankCustomer">
+    <view-state id="thankCustomer" view="thank">
         <transition to="endState"/>
     </view-state>
 

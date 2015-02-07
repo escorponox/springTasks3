@@ -42,8 +42,12 @@
                 </tr>
             </c:forEach>
         </table>
+        <h3>Cost: </h3>
         <table>
-
+            <tr>
+                <td>Total:</td>
+                <td><c:out value="${order.payment.amount}"/></td>
+            </tr>
         </table>
         <table>
             <tr>

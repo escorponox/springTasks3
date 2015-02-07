@@ -41,4 +41,8 @@
         <put-attribute name="body" value="/WEB-INF/views/flow/createPizza.jsp"/>
     </definition>
 
+    <definition name="thank" extends=".mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/views/flow/thank.jsp"/>
+    </definition>
+
 </tiles-definitions>
